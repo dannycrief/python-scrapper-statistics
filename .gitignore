@@ -5,4 +5,4 @@ venv/
 *.png
 *.jpeg
 *.log
-csv_dir/*.csv
+csv_dir/

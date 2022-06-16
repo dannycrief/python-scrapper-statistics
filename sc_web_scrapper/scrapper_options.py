@@ -2,8 +2,8 @@ import sys
 
 from selenium import webdriver
 
-from scrapper_statistics.common import *
-from scrapper_statistics.sc_web_scrapper import Scrapper
+from common import *
+from sc_web_scrapper import Scrapper
 from selenium.webdriver.firefox.options import Options
 
 

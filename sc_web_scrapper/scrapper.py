@@ -1,7 +1,7 @@
 import csv
 from selenium.webdriver.common.by import By
 
-from scrapper_statistics.common import get_title, get_location, get_price, get_area, \
+from common import get_title, get_location, get_price, get_area, \
     get_media_price, get_rooms_number, get_deposit_price, get_floor_number, get_construction_type, get_available_from, \
     get_balcony_garden_terrace, get_advertiser_type, get_is_for_students, get_equipment, get_media, get_heating, \
     get_security, get_windows, get_elevator, get_year_built, get_parking_space, get_building_material, \

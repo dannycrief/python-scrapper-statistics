@@ -1,4 +1,4 @@
-from scrapper_statistics.sc_web_scrapper import ScrapperOptions
+from sc_web_scrapper import ScrapperOptions
 
 if __name__ == "__main__":
     sc = ScrapperOptions(
