@@ -87,6 +87,7 @@ class OtoDomScrapperOptions(Scrapper):
         :return: None
         """
         self.driver.close()
+        return self.__FILENAME
 
     def __is_reachable(self) -> bool or SystemExit:
         """

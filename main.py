@@ -1,8 +1,10 @@
 from sc_web_scrapper import ScrapperOptions
+from sc_statistics import SCData
 
-if __name__ == "__main__":
+
+def call_scrapper(link: str):
     sc = ScrapperOptions(
-        link="https://otodom.pl/",
+        link=link,
         accept_cookies=True,
     )
 
@@ -14,4 +16,11 @@ if __name__ == "__main__":
 
     sc.search()
 
-    sc.end_session()
+    sc.end_session()  # ends selenium session and return file path
+
+
+if __name__ == "__main__":
+    sc_data = SCData(file_path="csv_dir/wynajem_mieszkanie_warszawa.csv")
+    test = sc_data.get_df()
+    print(test['media_price'])
+    # call_scrapper(link="https://otodom.pl/")
