@@ -1,0 +1,8 @@
+venv/
+.idea/
+.ipynb_checkpoints/
+*.jpg
+*.png
+*.jpeg
+*.log
+csv_dir/*.csv
