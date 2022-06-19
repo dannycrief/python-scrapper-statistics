@@ -14,12 +14,12 @@ class SCVisualAnalytics:
             html.Div(children=[
                 dcc.Graph(
                     id="mean_price",
-                    figure=self.__get_pie_mean_rental("price", "location", title="Mean price of retal"),
+                    figure=self.__get_pie_mean_rental("price", "location", title="Mean price of rental"),
                     style={'width': '50%'}
                 ),
                 dcc.Graph(
                     id="mean_price_re",
-                    figure=self.__get_pie_mean_rental("deposit_price", "location", title='Mean deposit of retal'),
+                    figure=self.__get_pie_mean_rental("deposit_price", "location", title='Mean deposit of rental'),
                     style={'width': '50%'}
                 ),
             ], style={
