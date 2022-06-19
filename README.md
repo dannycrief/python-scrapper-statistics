@@ -47,4 +47,4 @@ And here you go :)
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/dannycrief/python-scrapper-statistics/blob/master/LICENSE)
