@@ -12,6 +12,7 @@ class SCData:
 
         self.df = pd.read_csv(self.file_path)
 
+        self.df['location'] = self.df['location'].apply(lambda loc_value: ','.join(loc_value.split(',')[:2]))
         self.df['price'] = self.__get_float_from_currency('price')
         self.df['deposit_price'] = self.__get_float_from_currency('deposit_price')
         self.df['year_built'] = self.df['year_built'].astype('Int64')
@@ -23,11 +24,11 @@ class SCData:
         return self.df
 
     def __get_float_from_currency(self, column: str):
-        return self.df[column].replace('[ , zł / miesiąc]', '', regex=True).replace('[,]', '.', regex=True).astype(
+        return self.df[column].replace('[,]', '.', regex=True).replace('[ , zł / miesiąc]', '', regex=True).astype(
             'float64')
 
     def __get_area_as_float(self, column):
-        return self.df[column].replace('[ m²]', '', regex=True).replace('[,]', '.', regex=True).astype('float64')
+        return self.df[column].replace('[,]', '.', regex=True).replace('[ m²]', '', regex=True).astype('float64')
 
     def __get_floor_number_as_(self, column):
         return self.df[column].str.replace('parter', '1').str.replace('> ', '').str.split('/', expand=True)[0].astype(

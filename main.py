@@ -1,5 +1,5 @@
 from sc_web_scrapper import ScrapperOptions
-from sc_statistics import SCData
+from sc_statistics import SCData, SCAnalytics
 
 
 def call_scrapper(link: str):
@@ -20,7 +20,8 @@ def call_scrapper(link: str):
 
 
 if __name__ == "__main__":
-    sc_data = SCData(file_path="csv_dir/wynajem_mieszkanie_warszawa.csv")
-    test = sc_data.get_df()
-    print(test['media_price'])
     # call_scrapper(link="https://otodom.pl/")
+    sc_data = SCData(file_path="csv_dir/wynajem_mieszkanie_warszawa.csv")
+    df = sc_data.get_df()
+    sc_statistics = SCAnalytics(df)
+    sc_statistics.run_server(True)
