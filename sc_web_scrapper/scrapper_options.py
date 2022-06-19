@@ -15,19 +15,19 @@ class OtoDomScrapperOptions(Scrapper):
 
     __FILENAME = ""
 
-    def __init__(self, link: str, maximize_window: bool = True, accept_cookies: bool = False):
+    def __init__(self, maximize_window: bool = True, accept_cookies: bool = False):
         """
         Initialize OtoDomScrapperOptions class
         :param link: URL link to parse data
         :param maximize_window:
         :param accept_cookies:
         """
-        self.link = link
+        self.link = "https://otodom.pl/"
         self.maximize_window = maximize_window
         self.accept_cookies = accept_cookies
         self.__get_scrapper()
 
-        if not self.__is_reachable() and len(link) < 1:
+        if not self.__is_reachable():
             raise Exception("Link is unreachable")
         Scrapper.__init__(self, self.driver)
 

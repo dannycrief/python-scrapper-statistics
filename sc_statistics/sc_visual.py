@@ -1,6 +1,4 @@
-import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 from dash import Dash, html, dcc, dash_table
 
 
@@ -41,6 +39,7 @@ class SCVisualAnalytics:
         ])
 
     def run_server(self, debug: bool = False):
+        print("NOTE: Preparing server...")
         self.app.run_server(debug=debug)
 
     def __get_table_columns(self):
