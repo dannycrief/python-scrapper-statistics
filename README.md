@@ -13,7 +13,7 @@ The project contains 4 main classes:
 
 ## Installation
 
-Install PySC from Github using command line
+Install PySC from GitHub using command line
 
 1. Clone project
 
